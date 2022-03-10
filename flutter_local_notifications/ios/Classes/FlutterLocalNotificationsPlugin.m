@@ -508,7 +508,7 @@ static FlutterError *getFlutterError(NSError *error) {
     NSTimeInterval timeInterval = 0;
     switch ([arguments[REPEAT_INTERVAL] integerValue]) {
     case EveryMinute:
-      timeInterval = 60;
+      timeInterval = 60 * 10;
       notification.repeatInterval = NSCalendarUnitMinute;
       break;
     case Hourly:
